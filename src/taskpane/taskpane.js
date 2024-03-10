@@ -52,7 +52,7 @@ async function deleteNonuse() {
     
     newBodyRange.values = visibleRange.values;
     
-    sheet.getRange("A1").copyFrom(newHeaderRange.getRange(), Excel.RangeCopyType.formats)
+    sheet.getRange("A1").copyFrom(headerRange.getRange(), Excel.RangeCopyType.formats)
     sheet.getUsedRange().format.autofitColumns();
     console.log(51);
     
