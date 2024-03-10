@@ -52,8 +52,9 @@ async function deleteNonuse() {
     
     newBodyRange.values = visibleRange.values;
     
-    //sheet.getRange("A1").copyFrom(expensesTable.getRange(), Excel.RangeCopyType.formats)
+    sheet.getRange("A1").copyFrom(expensesTable.getRange(), Excel.RangeCopyType.formats)
     sheet.getUsedRange().format.autofitColumns();
+    newBodyRange.format.fill.color = "white";
     console.log(51);
     
     slicer.clearFilters();
